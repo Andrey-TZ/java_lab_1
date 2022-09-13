@@ -1,7 +1,5 @@
 package com.company;
 
-import java.io.*;
-
 import java.util.Random;
 
 public class Main {
@@ -53,31 +51,7 @@ public class Main {
             System.out.println();
         }
 
-//        Запись в файл для проверки
-        try (FileWriter writer = new FileWriter("test.txt", false);) {
-            for (int i = 0; i < k; i++) {
-                writer.write(Long.toString(c[i]) + " ");
-            }
 
-            writer.write('\n');
-            writer.write('\n');
-
-            for (int i = 0; i < 13; i++) {
-                writer.write(Double.toString(x[i])  + " ");
-            }
-
-            writer.write('\n');
-            writer.write('\n');
-
-            for (int i = 0; i < 8; i++) {
-                for (int j = 0; j < 13; j++) {
-                    writer.write(Double.toString(y[i][j]) + " ");
-                }
-                writer.write('\n');
-            }
-            writer.flush();
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());
         }
     }
-}
+
